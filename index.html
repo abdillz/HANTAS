@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>HANTAS Prototipe</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">
+      <span class="brand-mark" aria-hidden="true"></span>
+      <div>
+        <strong>HANTAS</strong>
+        <small>Prototipe aplikasi pendamping, Hangat Tanpa Asap</small>
+      </div>
+    </div>
+    <div class="view-switch" role="tablist" aria-label="Tampilan">
+      <button data-view="interaktif" class="active">Mode interaktif</button>
+      <button data-view="galeri">Galeri semua layar</button>
+    </div>
+  </header>
+
+  <main id="interaktif" class="stage">
+    <div class="phone-wrap">
+      <div class="phone" id="phone"></div>
+    </div>
+
+    <aside class="sim">
+      <h2>Panel simulasi</h2>
+      <p class="muted">Panel ini hanya untuk demonstrasi. Pilih kondisi rumah untuk melihat respons aplikasi.</p>
+      <div class="sim-group">
+        <span class="sim-label">Peran pengguna</span>
+        <div class="seg" id="roleSeg">
+          <button data-role="penghuni" class="active">Penghuni</button>
+          <button data-role="kader">Kader</button>
+        </div>
+      </div>
+      <div class="sim-group">
+        <span class="sim-label">Kondisi rumah</span>
+        <div class="sim-grid" id="scenarioBtns"></div>
+      </div>
+      <div class="sim-group">
+        <span class="sim-label">Koneksi</span>
+        <label class="toggle"><input type="checkbox" id="onlineToggle" checked> <span>Ada sinyal</span></label>
+      </div>
+      <div class="sim-note">
+        <strong>Catatan</strong>
+        <p>Seluruh angka adalah data ilustrasi untuk prototipe esai NEXORA 2026, bukan hasil pengukuran.</p>
+      </div>
+    </aside>
+  </main>
+
+  <main id="galeri" class="gallery" hidden></main>
+
+  <script src="app.js"></script>
+</body>
+</html>
